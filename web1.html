@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Paradise</title>
+  <link rel="stylesheet" href="food.css">
+</head>
+<body>
+  <h1>Food Paradise</h1>
+  <h2>Your daily deliciousness</h2>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <div class="container">
+    <div class="search-box">
+      <input type="text" id="search" placeholder="Search for your fav food...">
+    </div>
+
+    <div class="food-grid" id="foodGrid">
+      <div class="food-item">
+        <h2>Pizza</h2>
+        <p ><i>Cheesy and delicious Italian pizza.</i></p>
+      </div>
+
+      <div class="food-item">
+        <h2>Burger</h2>
+        <p><i>Juicy burger with fresh veggies and sauce.</i></p>
+      </div>
+
+      <div class="food-item">
+        <h3>Pasta</h3>
+        <p><i>Classic creamy Alfredo pasta.</i></p>
+      </div>
+
+      <div class="food-item">
+        <h2>Sandwich</h2>
+        <p><i>Healthy and quick bite for your day.</i></p>
+      </div>
+    </div>
+
+  <script>
+    var searchInput = document.getElementById("search");
+
+    var foodItems = document.getElementsByClassName("food-item");
+
+    searchInput.addEventListener("keyup", function() {
+      var filter = searchInput.value.toLowerCase();
+
+      for (var i = 0; i < foodItems.length; i++) {
+        var name = foodItems[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+ 
+        if (name.indexOf(filter) > -1) {
+          foodItems[i].style.display = "";
+        } else {
+          foodItems[i].style.display = "none";
+        }
+      }
+    });
+  </script>
+  </div>
+</body>
+    
+  </html>
