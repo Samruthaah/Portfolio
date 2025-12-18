@@ -64,6 +64,20 @@ body{
 .home-content {
     max-width:600px;
 }
+.home-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.home-img img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid #00ffff;
+    object-fit: cover;
+    box-shadow: 0 0 25px #00ffff;
+}
 .home-content h3 {
     font-size:32px;
     font-weight:700; 
@@ -149,11 +163,12 @@ body{
 }
 .about-img img
 {
-    padding-bottom: 20%;
-    max-width: 630px;
-    height: 50;
-    width: 50%;
-    border-radius: 10px;
+   width: 340px;
+    height: 340px;
+    border-radius: 50%;
+    border: 3px solid #00ffff;
+    object-fit: cover;
+    box-shadow: 0 0 25px #00ffff
 }
 .about-text h2
 {
